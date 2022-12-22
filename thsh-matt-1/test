@@ -1,0 +1,21 @@
+total 148
+-rw-r--r-- 1 root root  1825 Sep 14 06:31 builtin.c
+-rw-r--r-- 1 root root  6032 Sep 14 09:09 builtin.o
+-rw-r--r-- 1 root root    68 Aug 31 20:19 challenge.txt
+drwxr-xr-x 8 root root  4096 Sep 14 16:16 .git
+drwxr-xr-x 2 root root  4096 Aug 31 20:19 .github
+-rw-r--r-- 1 root root    66 Aug 31 20:19 .gitignore
+-rw-r--r-- 1 root root  3072 Sep 14 06:43 jobs.c
+-rw-r--r-- 1 root root  6824 Sep 14 09:09 jobs.o
+-rw-r--r-- 1 root root   534 Aug 31 20:19 Makefile
+-rw-r--r-- 1 root root     0 Sep 14 07:16 out.txt
+-rw-r--r-- 1 root root 12487 Sep 15 02:20 parse.c
+-rw-r--r-- 1 root root 11248 Sep 15 02:20 parse.o
+-rwxr-xr-x 1 root root 28944 Sep 15 02:20 parser_tester
+-rw-r--r-- 1 root root  2171 Aug 31 20:19 parser_tester.c
+-rw-r--r-- 1 root root    99 Sep 14 16:16 slack.txt
+-rw-r--r-- 1 root root     0 Sep 15 02:21 test
+-rwxr-xr-x 1 root root 23888 Sep 15 02:20 test_env
+-rw-r--r-- 1 root root   397 Aug 31 20:19 test_env.c
+-rw-r--r-- 1 root root  2770 Aug 31 20:19 thsh.c
+-rw-r--r-- 1 root root  1116 Aug 31 20:19 thsh.h

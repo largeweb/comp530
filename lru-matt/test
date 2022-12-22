@@ -1,0 +1,56 @@
+#!/bin/bash
+
+# Matthew Gordon
+# PID: 730400003
+
+# Bash script I made for testing
+# Inside of lru-matt type:
+# ./test [numthreads] [numseconds] [lru-type]
+# lru-type: s => lru-sequential; m => lru-mutex; f => lru-fine
+
+echo "MAKING..."
+make
+sleep 1
+if [[ -z $1 ]]
+then
+    echo "do ./test [numthreads] [numseconds] [lru-type]"
+    echo 'lru-type: s=lru-sequential, m=lru-mutex, f=lru-fine'
+    THREADCOUNT=1
+    echo "no thread count specified, going with 1 thread"
+else
+    THREADCOUNT=$1
+    echo "going with $1 threads"
+fi
+
+if [[ -z $2 ]]
+then
+    echo "no length specified, going with 30 seconds"
+    SECS=30
+else
+    SECS=$2
+    echo "going with $2 seconds"
+fi
+
+if [[ -z $3 ]]
+then
+    echo "no lru-type specified, going with 2 (mutex)"
+    sleep 1;
+    ./lru-mutex -c $THREADCOUNT -l $SECS
+else
+    if [[ "$3" == "s" ]]
+    then
+        echo "going with lru-sequential"
+        sleep 1
+        ./lru-sequential -c $THREADCOUNT -l $SECS
+    elif [[ "$3" == "m" ]]
+    then
+        echo "going with lru-mutex"
+        sleep 1
+        ./lru-mutex -c $THREADCOUNT -l $SECS
+    elif [[ "$3" == "f" ]]
+    then
+        echo "going with lru-fine"
+        sleep 1
+        ./lru-fine -c $THREADCOUNT -l $SECS
+    fi
+fi
